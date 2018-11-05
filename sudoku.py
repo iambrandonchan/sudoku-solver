@@ -21,9 +21,29 @@ What to consider, how to go about solving this problem
 
 """
 
+from node import SudokuSquare
+
+
 class SudokuProblem:
-	def __init__(self):
+	def __init__(self, grid):
 		#do stuff
+		self.grid = []
+
+		for row in range(0, len(grid)):
+			self.grid.append([])
+			for col in range(0, len(grid[col])):
+				square = None
+				if grid[row][col] is not '*':
+					square = SudokuSquare((row, col), [], grid[row][col])
+				else:
+					square = SudokuSquare((row, col), [])
+				self.grid[i].append(square)
+
+
+
+
+
+
 
 
 
